@@ -1,5 +1,6 @@
 package com.techproed;
 
+import com.techproed.utilities.TestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
@@ -13,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.concurrent.TimeUnit;
 
-public class Day08_Actions3 {
+public class Day08_Actions3 extends TestBase {
     /*
 Create a class: Actions3
 Create test method : keysUpDown()
@@ -22,14 +23,15 @@ Send iPhone X prices => convert small letter capital vice versa.
 Highlight the search box by double clicking
      */
 
-    WebDriver driver;
-    @Before
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-    }
+    //NOW THAT WE USED TESTBASE, WE DO NOT USE BEFORE AND AFTER METHOD
+//    WebDriver driver;
+//    @Before
+//    public void setUp() {
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+//        driver.manage().window().maximize();
+//    }
     @Test
     public void keysUpDown(){
         driver.get("https://www.google.com");
@@ -45,8 +47,8 @@ Highlight the search box by double clicking
                 .build()                       //build is optionally used to make perform stronger. Without build it works too
                 .perform();                   //do action. Must be used
     }
-    @After
-    public void tearDown(){
-        driver.close();
-    }
+//    @After
+//    public void tearDown(){
+//        driver.close();
+//    }
 }
