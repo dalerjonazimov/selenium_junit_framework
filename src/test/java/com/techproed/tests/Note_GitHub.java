@@ -19,5 +19,12 @@ Be careful when you use it, since it will bring the same copy of the github code
  git init
  git commit - m "day08 morning session" name the package
  git push
+
+*
+=If you want to update the project or add smt
+ git add .
+ git commit -m "Last Commit"
+ git push
      */
+
 }
