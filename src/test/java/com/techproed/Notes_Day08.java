@@ -34,9 +34,13 @@ actions.sendKeys(Keys.PAGE_UP).perform();
 actions.sendKeys(Keys.ARROW_UP).perform();
 ========================================================================================
 ===SUMMARY OF DAY08====
+SYNCHRONIZATION
+There is driver and browser and work together: if driver is very fast and page(browser) is very slow, then
+page will not load  elements. Then test case will fail. What we do in this case? Wr use below dynamic waits
+
 ==There are 3 WAITS in Selenium==
-    =Implicit Wait
-    =Explicit Wait
+    =Implicit Wait //driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+    =Explicit Wait //1) WebDriverWait wait = new WebDriverWait(driver,15); 2) WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(LOCATOR OF ELEMENT))
     =Fluent wait- this is similar to explicit wait
 
 What is difference between implicit and explicit wait?

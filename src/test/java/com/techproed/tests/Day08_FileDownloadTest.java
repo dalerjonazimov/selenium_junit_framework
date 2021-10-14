@@ -28,7 +28,7 @@ public class Day08_FileDownloadTest extends TestBase {
 // Getting the PATH of the HOME directory with JAVA
         String homePath = System.getProperty("user.home");
         //This will be the file name that is downloaded
-        String pathOfFlower = homePath + "/Downloads/flower.jpeg";
+        String pathOfFlower = homePath + "\\Downloads\\flower.jpeg";
 
         boolean isDownloaded = Files.exists(Paths.get(pathOfFlower));
 //Asserting if file download is successful
