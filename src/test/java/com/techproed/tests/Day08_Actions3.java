@@ -1,4 +1,4 @@
-package com.techproed;
+package com.techproed.tests;
 
 import com.techproed.utilities.TestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;

@@ -1,4 +1,4 @@
-package com.techproed;
+package com.techproed.tests;
 
 public class Notes_Day08 {
 
